@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+        <nav class="flex justify-between items-center bg-black h-fit  ">
+            <div class="logo">
+                <img src="logo.jpg" class="w-16" alt="logo">
+            </div>
+            <div>
+                <ul
+                    class="nav-links  absolute bg-black text-white h-[80%] overflow-y-hidden duration-500 top-[-100%] left-0 w-full flex flex-col justify-evenly items-center text-4xl  font-bruno ">
+                    <a href="#" class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"><span
+                            class="inline-block text-white text-3xl pointer-events-none transition-transform   ">Home</span></a>
+                    <a href="#" class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"><span
+                            class="inline-block text-white text-3xl pointer-events-none transition-transform   ">Our
+                            Story</span></a>
+                    <a href="#" class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"><span
+                            class="inline-block text-white text-3xl pointer-events-none transition-transform   ">Studio</span></a>
+                    <a href="#" class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"><span
+                            class="inline-block text-white text-3xl pointer-events-none transition-transform  ">Contact</span></a>
+                    <div
+                        class="cursor pointer-events-none fixed p-[0.3rem] bg-[#fff] rounded-[50%] mix-blend-difference transition-transform ">
+                    </div>
+                </ul>
+            </div>
+            <div class="hamburgur  cursor-pointer bg-white text-3xl rounded-full m-4 px-2 py-1">
+        
+                <ion-icon onclick="onToggleMenu(this)" class="m-3" name="menu"></ion-icon>
+            </div>
+        </nav>  
+    </div>    
+<!-- js -->
+<script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e) {
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[14%]')
+    }
+
+    (function () {
+
+        const link = document.querySelectorAll('nav>.hover-this');
+        const cursor = document.querySelector('.cursor');
+
+        const animateit = function (e) {
+            const span = this.querySelector('span');
+            const { offsetX: x, offsetY: y } = e,
+                { offsetWidth: width, offsetHeight: height } = this,
+
+                move = 25,
+                xMove = x / width * (move * 2) - move,
+                yMove = y / height * (move * 2) - move;
+
+            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+            if (e.type === 'mouseleave') span.style.transform = '';
+        };
+
+        const editCursor = e => {
+            const { clientX: x, clientY: y } = e;
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+        };
+
+        link.forEach(b => b.addEventListener('mousemove', animateit));
+        link.forEach(b => b.addEventListener('mouseleave', animateit));
+        window.addEventListener('mousemove', editCursor);
+
+    })(); 
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init();</script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

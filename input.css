@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .hover-this:hover~.cursor {
+        transform: translate(-50%, -50%) scale(8);
+    }
+
+    @media(min-width: 900px) {
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    @media(max-width: 900px) {
+        nav {
+            top: 30%;
+        }
+
+        .hover-this {
+            width: 100%;
+            padding: 20px 0;
+            display: inline-block;
+        }
+    }
+}
+
+@layer components {
+    ::-webkit-scrollbar {
+        width: 12px;
+        display: none
+    }
+
+    ::-webkit-scrollbar-track {
+        background: black;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: black;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
