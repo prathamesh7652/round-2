@@ -1,85 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="input.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="input.css" />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <div class="">
-        <nav class="flex justify-between items-center bg-black h-fit  ">
-            <div class="logo">
-                <img src="logo.jpg" class="w-16" alt="logo">
-            </div>
-            <div>
-                <ul
-                    class="nav-links  absolute bg-black text-white h-[80%] overflow-y-hidden duration-500 top-[-100%] left-0 w-full flex flex-col justify-evenly items-center text-4xl  font-bruno ">
-                    <a href="#" class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"><span
-                            class="inline-block text-white text-3xl pointer-events-none transition-transform   ">Home</span></a>
-                    <a href="#" class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"><span
-                            class="inline-block text-white text-3xl pointer-events-none transition-transform   ">Our
-                            Story</span></a>
-                    <a href="#" class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"><span
-                            class="inline-block text-white text-3xl pointer-events-none transition-transform   ">Studio</span></a>
-                    <a href="#" class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"><span
-                            class="inline-block text-white text-3xl pointer-events-none transition-transform  ">Contact</span></a>
-                    <div
-                        class="cursor pointer-events-none fixed p-[0.3rem] bg-[#fff] rounded-[50%] mix-blend-difference transition-transform ">
-                    </div>
-                </ul>
-            </div>
-            <div class="hamburgur  cursor-pointer bg-white text-3xl rounded-full m-4 px-2 py-1">
-        
-                <ion-icon onclick="onToggleMenu(this)" class="m-3" name="menu"></ion-icon>
-            </div>
-        </nav>  
-    </div>    
-<!-- js -->
-<script>
-    const navLinks = document.querySelector('.nav-links')
-    function onToggleMenu(e) {
-        e.name = e.name === 'menu' ? 'close' : 'menu'
-        navLinks.classList.toggle('top-[14%]')
-    }
+    <title>Future</title>
+  </head>
+  <body class="bg-black">
+    <!-- navbar -->
 
-    (function () {
+    <nav class="flex justify-between items-center  font-orbit bg-black h-fit">
+      <div class="text-white md:text-2xl  px-3">
+        Project Starlink
+        <div class="text-white text-xs md:text-base pt-2">
+          The future everyone needs
+        </div>
+      </div>
 
-        const link = document.querySelectorAll('nav>.hover-this');
-        const cursor = document.querySelector('.cursor');
+      <div>
+        <ul
+          class="nav-links absolute bg-black text-white h-[80%] overflow-y-hidden duration-500 top-[-100%] left-0 w-full flex flex-col justify-evenly items-center text-4xl font-bruno"
+        >
+          <a
+            href="#"
+            class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"
+            ><span
+              class="inline-block text-white text-lg md:text-3xl pointer-events-none transition-transform"
+              >Home</span
+            ></a
+          >
+          <a
+            href="#"
+            class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"
+            ><span
+              class="inline-block text-white text-lg  md:text-3xl pointer-events-none transition-transform"
+              >Our Story</span
+            ></a
+          >
+          <a
+            href="#"
+            class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"
+            ><span
+              class="inline-block text-white text-lg md:text-3xl pointer-events-none transition-transform"
+              >Studio</span
+            ></a
+          >
+          <a
+            href="#"
+            class="hover-this transition-all ease-in-out hover:translate-x-10 duration-150"
+            ><span
+              class="inline-block text-white text-lg md:text-3xl pointer-events-none transition-transform"
+              >Contact</span
+            ></a
+          >
+          <div
+            class="cursor pointer-events-none fixed p-[0.3rem] bg-[#fff] rounded-[50%] mix-blend-difference transition-transform"
+          ></div>
+        </ul>
+      </div>
+      <div
+        class="hamburgur cursor-pointer bg-white text-lg md:text-3xl rounded-full m-4 px-2 py-1"
+      >
+        <ion-icon
+          onclick="onToggleMenu(this)"
+          class="m-3"
+          name="menu"
+        ></ion-icon>
+      </div>
+    </nav>
+
+    <!-- main body -->
+
+    <div
+      class="h-[500px] w-full bg-fixed bg-cover bg-center flex flex-col justify-center items-center font-bruno text-[60px]"
+      style="background-image: url(hyperloop.webp)" 
+    >
+      <h2 class="text-2xl font-semibold md:text-5xl" data-aos="zoom-in-up" data-aos-duration="1000">Project Starlink</h2>
+      <p class="text-base font-semibold md:text-2xl" data-aos="zoom-in-up" data-aos-duration="1000">The future awaits....</p>
+    </div>
+
+    <div class="heading m-5 text-center font-bruno text-2xl text-white p-5">
+     Evolving Projects 
+    </div>
+
+<!-- 1 -->
+    <div
+      class="container flex flex-col mt-3 space-y-4 p-3 bg-black md:flex md:w-[100%] md:justify-end  md:right-3 md:flex-row   rounded-xl "
+    >
+      
+      <div class="left pr-2 " data-aos="fade-right" data-aos-duration="1000">
+        <img  class="rounded-xl " src="healthcare.webp" alt="healthcare" />
+      </div>
+      <div class="right" data-aos="fade-left" data-aos-duration="1000">
+        <p class="text-white text-xl font-bruno text pt-20">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+          voluptatum? Voluptas cum numquam sequi? Facilis aut labore doloremque!
+          Natus fuga porro animi perspiciatis dicta! Dignissimos enim
+          repudiandae autem earum at.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div
+      class="container flex flex-col-reverse mt-3 space-y-4 p-3 bg-black md:flex md:w-[100%] md:justify-end  md:right-3 md:flex-row  rounded-xl "
+    >
+      <div class="right" data-aos="fade-right" data-aos-duration="1000"> 
+        <p class="text-white text-xl font-bruno text pt-16">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+          voluptatum? Voluptas cum numquam sequi? Facilis aut labore doloremque!
+          Natus fuga porro animi perspiciatis dicta! Dignissimos enim
+          repudiandae autem earum at.
+        </p>
+      </div>
+      <div class="left pr-2" data-aos="fade-left" data-aos-duration="1000">
+        <img  class="rounded-xl " src="healthcare2.webp" alt="healthcare" />
+      </div>
+    </div>
+
+
+    <!-- 3 -->
+    <div
+      class="container flex flex-col mt-3 space-y-4 p-3 bg-black md:flex md:w-[100%] md:justify-end  md:right-3 md:flex-row   rounded-xl "
+    >
+      
+      <div class="left pr-2 " data-aos="fade-right" data-aos-duration="1000">
+        <img  class="rounded-xl " src="interseller.jpg" alt="healthcare" />
+      </div>
+      <div class="right" data-aos="fade-left" data-aos-duration="1000">
+        <p class="text-white text-xl font-bruno text pt-8 ">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
+          voluptatum? Voluptas cum numquam sequi? Facilis aut labore doloremque!
+          Natus fuga porro animi perspiciatis dicta! Dignissimos enim
+          repudiandae autem earum at.
+        </p>
+      </div>
+    </div>
+
+   
+
+    <div
+      class="h-[500px] w-full bg-fixed bg-cover bg-center flex flex-col justify-center items-center font-bruno text-[60px]"
+      style="background-image: url(colonization.webp)" 
+    >
+      <h2 class="text-2xl font-semibold md:text-5xl" data-aos="zoom-in-up" data-aos-duration="1000">Our Achievements</h2>
+      
+    </div>
+
+    
+
+    <!-- javascript for hambuger -->
+
+    <script>
+      const navLinks = document.querySelector(".nav-links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[14%]");
+      }
+
+      (function () {
+        const link = document.querySelectorAll("nav>.hover-this");
+        const cursor = document.querySelector(".cursor");
 
         const animateit = function (e) {
-            const span = this.querySelector('span');
-            const { offsetX: x, offsetY: y } = e,
-                { offsetWidth: width, offsetHeight: height } = this,
+          const span = this.querySelector("span");
+          const { offsetX: x, offsetY: y } = e,
+            { offsetWidth: width, offsetHeight: height } = this,
+            move = 25,
+            xMove = (x / width) * (move * 2) - move,
+            yMove = (y / height) * (move * 2) - move;
 
-                move = 25,
-                xMove = x / width * (move * 2) - move,
-                yMove = y / height * (move * 2) - move;
+          span.style.transform = `translate(${xMove}px, ${yMove}px)`;
 
-            span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-
-            if (e.type === 'mouseleave') span.style.transform = '';
+          if (e.type === "mouseleave") span.style.transform = "";
         };
 
-        const editCursor = e => {
-            const { clientX: x, clientY: y } = e;
-            cursor.style.left = x + 'px';
-            cursor.style.top = y + 'px';
+        const editCursor = (e) => {
+          const { clientX: x, clientY: y } = e;
+          cursor.style.left = x + "px";
+          cursor.style.top = y + "px";
         };
 
-        link.forEach(b => b.addEventListener('mousemove', animateit));
-        link.forEach(b => b.addEventListener('mouseleave', animateit));
-        window.addEventListener('mousemove', editCursor);
+        link.forEach((b) => b.addEventListener("mousemove", animateit));
+        link.forEach((b) => b.addEventListener("mouseleave", animateit));
+        window.addEventListener("mousemove", editCursor);
+      })();
+    </script>
 
-    })(); 
+    <!-- javascript for aos animations  -->
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        @property --num {
+            syntax: '<integer>';
+            initial-value: 0;
+            inherits: false;
+        }
+    </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+
+
+    <main class="relative m-[100% ]  h-[300px] flex flex-col justify-center bg-black overflow-hidden">
+        <div class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24">
+
+            <!-- Animated Number Counter -->
+            <section class="grid gap-12 md:grid-cols-3 md:gap-16">
+
+
+                <!-- Block #1 -->
+                <article data-aos="fade-right" data-aos-duration="1000">
+                    <div class="w-14 h-14 rounded shadow-md bg-transparent text-white flex justify-center items-center rotate-3 mb-6 bg-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="20">
+                            <defs>
+                                <linearGradient id="icon1-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#FFFFFF" />
+                                    <stop offset="100%" stop-color="#4F46E5" />
+                                </linearGradient>
+                                <linearGradient id="icon1-b" x1="50%" x2="50%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#EEF2FF" />
+                                    <stop offset="100%" stop-color="#C7D2FE" />
+                                </linearGradient>
+                            </defs>
+                            <g fill="none" fill-rule="nonzero">
+                                <path fill="url(#icon1-a)"
+                                    d="M20.625 0H9.375a9.375 9.375 0 0 0 0 18.75h11.25a9.375 9.375 0 0 0 0-18.75Z"
+                                    transform="translate(.885 .885)" />
+                                <path fill="url(#icon1-b)"
+                                    d="M9.375 17.5A8.125 8.125 0 0 1 1.25 9.375 8.125 8.125 0 0 1 9.375 1.25 8.125 8.125 0 0 1 17.5 9.375 8.125 8.125 0 0 1 9.375 17.5Z"
+                                    transform="translate(.885 .885)" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h2>
+                        <span
+                            class="flex tabular-nums text-white text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                            x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:40]'">
+                            <span class="supports-[counter-set]:sr-only">40</span>K+
+                        </span>
+                        <span
+                            class="inline-flex text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-indigo-300 mb-2">Planets <br>Explored</span>
+                    </h2>
+                    
+                </article>
+
+
+                <!-- Block #2 -->
+                <article data-aos="fade-up" data-aos-duration="1000" > 
+                    <div class="w-14 h-14 rounded shadow-md bg-transparent flex justify-center items-center -rotate-3 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="19">
+                            <defs>
+                                <linearGradient id="icon2-a" x1="50%" x2="50%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#A5B4FC" />
+                                    <stop offset="100%" stop-color="#4F46E5" />
+                                </linearGradient>
+                                <linearGradient id="icon2-b" x1="50%" x2="50%" y1="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#E0E7FF" />
+                                    <stop offset="100%" stop-color="#A5B4FC" />
+                                </linearGradient>
+                            </defs>
+                            <g fill="none" fill-rule="nonzero">
+                                <path fill="url(#icon2-a)"
+                                    d="M5.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759A.5.5 0 0 0 4 18.5h1a.5.5 0 0 0 .362-.155C7.934 15.64 11 11.215 11 5.5A5.506 5.506 0 0 0 5.5 0Z" />
+                                <path fill="url(#icon2-b)"
+                                    d="M18.5 0a5.5 5.5 0 0 0 0 11c.159 0 .314-.01.469-.024a15.896 15.896 0 0 1-2.393 6.759.5.5 0 0 0 .424.765h1a.5.5 0 0 0 .363-.155C20.934 15.64 24 11.215 24 5.5A5.506 5.506 0 0 0 18.5 0Z" />
+                            </g>
+                        </svg>
+                    </div>
+                    <h2>
+                        <span
+                            class="flex tabular-nums text-white text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                            x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:700]'">
+                            <span class="supports-[counter-set]:sr-only">700</span>K+
+                        </span>
+                        <span
+                            class="inline-flex text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-indigo-300 mb-2">Interplanetory Population</span>
+                    </h2>
+                    
+                </article>
+
+
+                <!-- Block #3 -->
+                <article  data-aos="fade-left" data-aos-duration="1000" >
+                    <div class="w-14 h-14 rounded shadow-md bg-transparent flex justify-center items-center rotate-3 mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                            <defs>
+                                <radialGradient id="icon3-a" cx="68.15%" cy="27.232%" r="67.641%" fx="68.15%"
+                                    fy="27.232%">
+                                    <stop offset="0%" stop-color="#E0E7FF" />
+                                    <stop offset="100%" stop-color="#A5B4FC" />
+                                </radialGradient>
+                            </defs>
+                            <g fill="none" fill-rule="nonzero">
+                                <circle cx="13" cy="13" r="13" fill="url(#icon3-a)" />
+                                <path fill="#4F46E5" fill-opacity=".56"
+                                    d="M0 13a12.966 12.966 0 0 0 4.39 9.737l1.15-1.722s.82-.237.997-.555c.554-.997-.43-2.733-.43-2.733a5.637 5.637 0 0 0-.198-1.23c-.148-.369-1.182-.874-1.182-.874S3.73 13.998 3.73 13a1.487 1.487 0 0 1 1.404-1.55 2.424 2.424 0 0 0 1.588-1.146s1.256-.332 1.551-.847c.295-.515-.332-2.36-.332-2.36a3.086 3.086 0 0 0-.012-1.481 2.8 2.8 0 0 0-.93-1.12 6.143 6.143 0 0 0-1.447-2.148A12.981 12.981 0 0 0 0 13ZM13 0c-.35 0-.696.018-1.04.045-.112.35-.695 1.248-.548 1.653.147.406 1.353.783 1.353.783s-.32 1.25.235 1.692c.554.443 1.44-.148 1.773-.037.331.111.258 2.29.258 2.29s1.07 1.181 2.124 1.33c1.053.147 2.656-1.64 2.656-1.64a21.131 21.131 0 0 0 3.448-1.102A12.974 12.974 0 0 0 13 0Z" />
+                                <path fill="#6366F1" fill-opacity=".4"
+                                    d="M21.398 13.848c.296.702-.555 2.494-1.256 2.843a4.76 4.76 0 0 0-1.82 1.452c-.259.406-.598 2.082-1.447 2.415-.85.332-2.863 2.228-3.934 1.932-1.071-.296-1.071-2.842-.333-3.988.441-.683-.074-2.179-.113-2.695-.039-.517-1.586-1.478-1.586-1.994 0-.813 1.772-2.955 1.772-2.955s1.453-.48 1.896-.37c.448.164.877.374 1.28.628.782.058 1.552.22 2.29.48l.848.775s2.107.777 2.403 1.477Z" />
+                            </g>
+                        </svg>
+
+                    </div>
+                    <h2>
+                        <span
+                            class="flex tabular-nums text-white text-5xl font-extrabold mb-2 transition-[_--num] duration-[3s] ease-out [counter-set:_num_var(--num)] supports-[counter-set]:before:content-[counter(num)]"
+                            x-data="{ shown: false }" x-intersect="shown = true" :class="shown && '[--num:149]'">
+                            <span class="supports-[counter-set]:sr-only">149</span>+
+                        </span>
+                        <span
+                            class="inline-flex text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-indigo-300 mb-2">Employment Oppotunities</span>
+                    </h2>
+                    
+                </article>
+            </section>
+            <!-- End: Animated Number Counter -->
+
+        </div>
+
+    </main>
+
+/* carousal from here with its scripts */
+
+<main class="relative h-[70px] flex flex-col justify-center bg-slate-900 overflow-hidden">
+    <div class="w-full max-w-5xl mx-auto px-4 md:px-6 py-24">
+        <div class="text-center">
+
+            <!-- Logo Carousel animation -->
+            <div x-data="{}" x-init="$nextTick(() => {
+                        let ul = $refs.logos;
+                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                        ul.nextSibling.setAttribute('aria-hidden', 'true');
+                    })"
+                class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                <ul x-ref="logos"
+                    class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                    <li>
+                        <a href=""><img src="./facebook.svg" alt="Facebook" /></a>
+                        
+                    </li>
+                    <li>
+                        <a href=""><img src="./disney.svg" alt="Disney" /></a>
+                        
+                    </li>
+                    <li>
+                        <a href=""><img src="./airbnb.svg" alt="Airbnb" /></a>
+                        
+                    </li>
+                    <li>
+                        <a href=""><img src="./apple.svg" alt="Apple" /></a>
+                        
+                    </li>
+                    <li>
+                        <a href=""><img src="./spark.svg" alt="Spark" /></a>
+                        
+                    </li>
+                    <li>
+                        <a href=""><img src="./samsung.svg" alt="Samsung" /></a>
+                        
+                    </li>
+                    <li>
+                        <a href=""><img src="./quora.svg" alt="Quora" /></a>
+                        
+                    </li>
+                    <li>
+                        <a href=""><img src="./sass.svg" alt="Sass" /></a>
+                        
+                    </li>
+                </ul>
+            </div>
+            <!-- End: Logo Carousel animation -->
+
+        </div>
+
+    </div>
+</main>
+
+/* scripts of carosal from here */
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    inter: ['Inter', 'sans-serif'],
+                },
+                animation: {
+                    'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                },
+                keyframes: {
+                    'infinite-scroll': {
+                        from: { transform: 'translateX(0)' },
+                        to: { transform: 'translateX(-100%)' },
+                    }
+                }
+            },
+        },
+    };
 </script>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">AOS.init();</script>
+/* js for aos */
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
 </script>
-</body>
+  </body>
 </html>
